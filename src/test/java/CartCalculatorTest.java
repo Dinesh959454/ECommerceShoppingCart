@@ -1,4 +1,3 @@
-
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -13,9 +12,9 @@ class CartCalculatorTest {
 
     @Test
     void testDiscount() {
-        assertEquals(200.0, calculator.calculateDiscount(2000.0), 0.01);
+        assertEquals(200.0, calculator.calculateDiscount(2000.0, 10), 0.01);
+        assertEquals(400.0, calculator.calculateDiscount(2000.0, 20), 0.01);
     }
-
     @Test
     void testTax() {
         assertEquals(180.0, calculator.calculateTax(1000.0), 0.01);
